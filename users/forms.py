@@ -14,9 +14,9 @@ class UserDetailForm(forms.ModelForm):
         fields = [
             "name",
             "gender",
-            "phone",
-            "address",
-            "date_of_birth",
-            "username",
             "email",
+            "phone",
+            "credit_card",
+            "username",
+            "password",
         ]

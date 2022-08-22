@@ -8,13 +8,18 @@ class UsersDetails(models.Model):
     #Personal Details
     name = models.CharField(max_length=30, default='YOUR NAME')
 
-    gender = models.CharField(max_length=1, default="")
+    # Choose Gender
+    gender_options = (
+        ("Male", "Male"),
+        ("Female", "Female"),
+        ("Other", "Other"),
+    )
+
+    gender = models.CharField(max_length=10, choices=gender_options, default="Male")
     
-    phone = models.CharField(max_length=11, default="YOUR NUMBER")
+    phone = models.CharField(max_length=20, default="YOUR NUMBER")
     
-    address = models.TextField(default="YOUR ADDRESS")
-    
-    date_of_birth = models.DateTimeField()
+    credit_card = models.CharField(max_length=20, default="YOUR CREDIT CARD")
 
 
     #Account Details
@@ -22,12 +27,12 @@ class UsersDetails(models.Model):
     
     email = models.EmailField(('email address'), unique = True, default="YOUR EMAIL ADDRESS")
     
-    # #password = forms.CharField(widget=forms.PasswordInput)
+    password = models.CharField(max_length=30, default="YOUR PASSWORD")
 
 
 
     def __str__(self):
-        return "%the user details are %s" % (self.name, self.gender, self.phone, self.address, self.date_of_birth, self.username, self.email, self.password)
+        return self.name
 
 
 
@@ -35,4 +40,4 @@ class Ser(models.Model):
     ser = models.OneToOneField(UsersDetails, on_delete=models.CASCADE, primary_key=True)
 
     def __str__(self):
-        return "%the serial is" % (self.ser)
+        return "the serial is" % (self.ser)
