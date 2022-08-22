@@ -24,8 +24,8 @@ urlpatterns = [
     #Account URLS
     path('create/', views.create_view, name="create"),
     path('', views.list_view, name="list"),
-    path('<id>/', views.detail_view),
-    path('<id>/edit/', views.update_view, name="edit"),
-    path('<id>/delete/', views.delete_view, name="delete"),
+    path('<int:id>/', views.detail_view),
+    path('<int:id>/edit/', views.update_view, name="edit"),
+    path('<int:id>/delete/', views.delete_view, name="delete"),
     
 ]

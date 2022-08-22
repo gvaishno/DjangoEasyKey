@@ -19,20 +19,24 @@ class UsersDetails(models.Model):
     
     phone = models.CharField(max_length=20, default="YOUR NUMBER")
     
-    credit_card = models.CharField(max_length=20, default="YOUR CREDIT CARD")
+    credit_card = models.TextField()
 
 
     #Account Details
     username = models.CharField(max_length=10, default='YOUR USERNAME')
     
-    email = models.EmailField(('email address'), unique = True, default="YOUR EMAIL ADDRESS")
+    email = models.TextField()
     
     password = models.CharField(max_length=30, default="YOUR PASSWORD")
+
+    # Randtronics Details
+    uuidkey = models.CharField(max_length=50, default="")
+    ivnonce = models.CharField(max_length=50, default="")
 
 
 
     def __str__(self):
-        return self.name
+        return self.name, self.gender, self.phone, self.credit_card, self.username, self.email, self.password, self.uuidkey, self.ivnonce
 
 
 

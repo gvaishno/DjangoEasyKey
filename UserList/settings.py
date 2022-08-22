@@ -95,6 +95,9 @@ DATABASES = {
     }
 }
 
+RANDTRONICS_EASYKEY_API = "https://192.168.29.75:8943"
+RANDTRONICS_EASYEKEY_AUTH_KEY = "Y2xpZW50OjEyMw=="
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
