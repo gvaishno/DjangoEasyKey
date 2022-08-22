@@ -18,19 +18,20 @@
           </tr>
         </thead>
         <tbody>
-        {% for data in dataset %}.
+        {% for i in all_data %}
           <tr>
-            <th scope="row">{{ data.id }}</th>
-            <td>{{ data.name }}</td>
-            <td>{{ data.gender }}</td>
-            <td>{{ data.email }}</td>
-            <td>{{ data.phone }}</td>
-            <td>{{ data.credit_card }}</td>
-            <td>{{ data.username }}</td>
-            <td>{{ data.password }}</td>
+            <th scope="row">{{ i.id }}</th>
+            <td>{{ i.name }}</td>
+            <td>{{ i.gender }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.phone }}</td>
+            <td>{{ i.credit_card }}</td>
+            <td>{{ i.username }}</td>
+            <td>{{ i.password }}</td>
             <td>
-                <a href="{% url 'edit' data.id %}">Edit</a>
-                <a href="{% url 'delete' data.id %}">Delete</a>
+                <a href="{% url 'edit' i.id %}">Edit</a>
+                <a href="{% url 'delete' i.id %}">Delete</a>
+            </td>
           </tr>
         {% endfor %}
         </tbody>
