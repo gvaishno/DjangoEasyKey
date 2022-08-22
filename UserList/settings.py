@@ -76,10 +76,22 @@ WSGI_APPLICATION = 'UserList.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# MYSQL DATABASE
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'userlist',
+        'USER': 'remote',
+        'PASSWORD': 'remote',
+        'HOST': '192.168.29.75',
+        'PORT': '3306',
     }
 }
 
