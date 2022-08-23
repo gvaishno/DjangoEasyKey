@@ -1,4 +1,4 @@
-# UserList with PII
+# DjangoEasyKey - User list with PI Information
 ### With Randtronics DPM easyKey capabilities.
 ### Developed merely for demonstrations. Not for production.
 
