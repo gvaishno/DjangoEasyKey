@@ -16,22 +16,17 @@ class UsersDetails(models.Model):
     )
 
     gender = models.CharField(max_length=10, choices=gender_options, default="Male")
-    
     phone = models.CharField(max_length=20, default="YOUR NUMBER")
-    
     credit_card = models.TextField()
 
-
     #Account Details
-    username = models.CharField(max_length=10, default='YOUR USERNAME')
-    
+    username = models.CharField(max_length=10, default='YOUR USERNAME')    
     email = models.TextField()
-    
     password = models.CharField(max_length=30, default="YOUR PASSWORD")
 
     # Randtronics Details
-    uuidkey = models.CharField(max_length=50, default="")
-    ivnonce = models.CharField(max_length=50, default="")
+    uuid_cc = models.CharField(max_length=50, default="")
+    uuid_email = models.CharField(max_length=100, default="")
 
 
 

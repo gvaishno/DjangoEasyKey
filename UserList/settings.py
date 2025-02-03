@@ -87,16 +87,22 @@ WSGI_APPLICATION = 'UserList.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'userlist',
-        'USER': 'remote',
-        'PASSWORD': 'remote',
-        'HOST': '192.168.29.75',
+        'NAME': 'usersdb',
+        'USER': 'dbuser',
+        'PASSWORD': 'user@db@12',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
 
-RANDTRONICS_EASYKEY_API = "https://192.168.29.75:8943"
-RANDTRONICS_EASYEKEY_AUTH_KEY = "Y2xpZW50OjEyMw=="
+# RANDTRONICS_EASYKEY_API = "https://192.168.29.75:8943"
+RANDTRONICS_EASYKEY_API = "https://192.168.2.144:8943"
+RANDTRONICS_EASYEKEY_AUTH_KEY = "YXBpdXNlcjphcGl1c2VyQDEyMw=="
+
+RANDTRONICS_EASYDATA_API = "https://192.168.2.144:8643"
+RANDTRONICS_EASYDATA_AUTH_KEY = "YXBpdXNlcjphcGl1c2VyQDEyMw=="
+RANDTRONICS_EASYDATA_CLIENT_USERNAME = "demoappnew"
+RANDTRONICS_EASYDATA_CLIENT_PASSWORD = "demoappnew"
 
 
 # Password validation
